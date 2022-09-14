@@ -1,0 +1,7 @@
+CREATE TABLE HostRecord (
+	key VARCHAR ( 50 ) UNIQUE,
+	ipamLabel VARCHAR ( 50 ) NOT NULL,
+	ip VARCHAR ( 50 ) NOT NULL,
+	host VARCHAR ( 255 ) UNIQUE,
+	created_on TIMESTAMP NOT NULL,
+);

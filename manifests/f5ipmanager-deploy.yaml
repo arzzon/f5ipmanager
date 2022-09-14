@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: f5ipmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: f5ipmanager
+  template:
+    metadata:
+      labels:
+        app: f5ipmanager
+    spec:
+      containers:
+        - name: f5ipmanager
+          image: <image>
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          command:
+            - bin/f5ipmanager
